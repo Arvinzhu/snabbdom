@@ -1,3 +1,6 @@
+/**
+ * 定义了AttachData，VNodeDataWithAttach ，VNodeWithAttachData 等数据结构
+ */
 import {VNode, VNodeData} from '../vnode';
 
 export interface AttachData {

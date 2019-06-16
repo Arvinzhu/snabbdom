@@ -1,3 +1,5 @@
+/**入口文件 */
+
 import {init} from './snabbdom';
 import {attributesModule} from './modules/attributes'; // for setting attributes on DOM elements
 import {classModule} from './modules/class'; // makes it easy to toggle classes

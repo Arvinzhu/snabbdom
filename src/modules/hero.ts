@@ -1,3 +1,6 @@
+/**
+ * 在vnode更新的时候，和动画效果有关的支持
+ */
 import {VNode, VNodeData} from '../vnode';
 import {Module} from './module';
 

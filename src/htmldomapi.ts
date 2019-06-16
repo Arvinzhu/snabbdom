@@ -1,3 +1,7 @@
+
+/**
+ * 对浏览器的dom的api进行二次包装，可以直接操作，html的dom的api
+ */
 export interface DOMAPI {
   createElement: (tagName: any) => HTMLElement;
   createElementNS: (namespaceURI: string, qualifiedName: string) => Element;
@@ -15,23 +19,35 @@ export interface DOMAPI {
   isText: (node: Node) => node is Text;
   isComment: (node: Node) => node is Comment;
 }
-
+/**
+ * 创建标签元素
+ */
 function createElement(tagName: any): HTMLElement {
   return document.createElement(tagName);
 }
-
+/**
+ * 创建一个具有指定的命名空间URI和限定名称的元素。
+ * @param namespaceURI 指定与元素相关联的命名空间URI的字符串
+ * @param qualifiedName 元素的类型的字符串
+ */
 function createElementNS(namespaceURI: string, qualifiedName: string): Element {
   return document.createElementNS(namespaceURI, qualifiedName);
 }
-
+/**
+ * 添加文本节点
+ */
 function createTextNode(text: string): Text {
   return document.createTextNode(text);
 }
-
+/**
+ * 创建注释
+ */
 function createComment(text: string): Comment {
   return document.createComment(text);
 }
-
+/**
+ * 节点前插入元素
+ */
 function insertBefore(parentNode: Node, newNode: Node, referenceNode: Node | null): void {
   parentNode.insertBefore(newNode, referenceNode);
 }

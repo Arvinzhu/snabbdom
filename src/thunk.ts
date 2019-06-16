@@ -1,3 +1,9 @@
+/**
+ *  分块
+ * 
+ * 
+ */
+
 import {VNode, VNodeData} from './vnode';
 import {h} from './h';
 
@@ -55,7 +61,7 @@ export const thunk = function thunk(sel: string, key?: any, fn?: any, args?: any
   }
   return h(sel, {
     key: key,
-    hook: {init, prepatch},
+    hook: {init: init, prepatch: prepatch},
     fn: fn,
     args: args
   });
